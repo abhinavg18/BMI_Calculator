@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
                         bmi_status = "Obese";
                     tv_bmistatus.setText("You are " + bmi_status);
                     Toast.makeText(getApplicationContext(),"BMI Calculated",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"BMI Calculated",Toast.LENGTH_SHORT).show();
                 }
                 else{
                     Toast.makeText(getApplicationContext(),"Invalid Inputs",Toast.LENGTH_SHORT).show();
