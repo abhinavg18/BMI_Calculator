@@ -2,11 +2,14 @@
     <string name="app_name">BMI Calculator</string>
     <string name="tv_bmi">BODY MASS INDEX (BMI)</string>
     <string name="tv_weight">Weight</string>
-    <string name="et_weight">lb</string>
-    <string name="et_feet">feet</string>
-    <string name="et_inches">inches</string>
+    <string name="et_feet">"  "</string>
+    <string name="et_inches">" "</string>
     <string name="button_calculate">Calculate BMI</string>
     <string name="tv_height">Height</string>
     <string name="tv_bmianswer" />
     <string name="tv_bmistatus" />
+    <string name="tv_inches">inches</string>
+    <string name="tv_feet">feet</string>
+    <string name="tv_lb">lb</string>
+    <string name="et_weight">" "</string>
 </resources>

@@ -53,18 +53,18 @@ public class MainActivity extends AppCompatActivity {
                 String tempWeight = et_weight.getText().toString();
                 String tempInches = et_inches.getText().toString();
                 String tempFeet = et_feet.getText().toString();
-                if (tempWeight != null && !tempWeight.equals("")) {
+                if (tempWeight != null && !tempWeight.equals("") && !tempWeight.equals("0")) {
                     weight = Double.parseDouble(tempWeight);
                 } else {
                     flag = true;
-                    et_weight.setError("Hey, Please Enter weight in lb");
+                    et_weight.setError("Hey, Please enter weight in lb");
                 }
 
 
                 if (tempInches != null && !tempInches.equals("")) {
                     inches = Double.parseDouble(tempInches);
-                    if (inches > 11) {
-                        et_inches.setError("Hey, Please enter less than 11 inches");
+                    if (inches >= 12) {
+                        et_inches.setError("Hey, Please enter less than 12 inches");
                         flag=true;
                     }
                 } else{
@@ -82,7 +82,10 @@ public class MainActivity extends AppCompatActivity {
                     et_feet.setError("Hey, Please enter feet");
                 }
 
+                if (feet==0 && inches==0){
+                    flag=true;
 
+                }
 
 
                 if (!flag){
@@ -103,9 +106,11 @@ public class MainActivity extends AppCompatActivity {
                         bmi_status = "Obese";
                     tv_bmistatus.setText("You are " + bmi_status);
                     Toast.makeText(getApplicationContext(),"BMI Calculated",Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getApplicationContext(),"BMI Calculated",Toast.LENGTH_SHORT).show();
+
                 }
                 else{
+                    tv_bmistatus.setText("");
+                    tv_bmivalue.setText("");
                     Toast.makeText(getApplicationContext(),"Invalid Inputs",Toast.LENGTH_SHORT).show();
                 }
 
